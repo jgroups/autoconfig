@@ -1,0 +1,9 @@
+<config>
+	<group>
+		<property name="me.lbing.value" />
+	</group>
+
+	<script>
+		<generate template="config.properties.vm" destfile="config.properties" charset="utf-8" />
+	</script>
+</config>
