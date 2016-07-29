@@ -1,9 +1,11 @@
 <config>
 	<group>
 		<property name="me.lbing.value" />
+		<property name="cc.cococheng.value" />
 	</group>
 
 	<script>
 		<generate template="config.properties.vm" destfile="config.properties" charset="utf-8" />
+		<generate template="my-config.properties.vm" destfile="my-config.properties" charset="utf-8" />
 	</script>
 </config>
