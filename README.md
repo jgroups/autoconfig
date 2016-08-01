@@ -15,3 +15,19 @@ java -jar target/autoconfig-1.0-SNAPSHOT.jar
 ##注: 
 1,autoconfig依赖于Maven
 2,有人或许会感觉迷惑，在模板文件config.properties.vm中，需要被替换的明明是me_lbing_value，为什么在auto-config.xml文件中会定义属性 me.lbing.value 呢？现在只需要记住属性名中的点在autoconfig执行的时候会被替换成下划线。
+3,maven对应插件
+```
+<plugin>
+    <groupId>com.alibaba.citrus.tool</groupId>
+    <artifactId>autoconfig-maven-plugin</artifactId>
+    <version>${autoconfig-plugin-version}</version>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals>
+                <goal>autoconfig</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+```
